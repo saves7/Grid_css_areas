@@ -8,17 +8,10 @@ body {
     line-height: 1.4;
 }
 
-div {
+* {
     box-sizing: border-box;
 }
 
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    min-width: 480px;
-    margin: 0 auto;
-}
 
 a {
     text-decoration: none;
@@ -28,3 +21,39 @@ ul {
     list-style: none;
 }
 
+.container {
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "aboutus content content content"
+                         "footer footer footer footer"
+    /*/2fr 2fr 2fr                         */
+    
+    ;
+    /*grid-auto-rows: minmax(220px auto);*/
+    width: 100%;
+    max-width: 1200px;
+    min-width: 480px;
+    margin: 0 auto;
+}
+
+
+.header {
+    grid-area: header;
+    background: #ccc;
+    
+}
+.content {
+    grid-area: content;
+}
+.content__item {
+    border: 1px solid #000;
+}
+
+.aboutus {
+    grid-area: aboutus;
+}
+
+.footer {
+    grid-area: footer;
+    background: #ccc;
+}
